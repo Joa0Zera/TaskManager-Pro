@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - TaskManager Pro</title>
+  <script>!function(){var t=localStorage.getItem('taskmanager-theme')||'dark';document.documentElement.setAttribute('data-theme',t)}();</script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/premium.css">
+</head>
+<body class="dashboard-app">
+  <div class="auth-page">
+    <div class="auth-visual">
+      <div class="auth-visual-content">
+        <div class="auth-visual-icon">✓</div>
+        <h2>TaskManager Pro</h2>
+        <p>Sua central de produtividade. Organize tarefas, acompanhe metas e mantenha o foco no que importa.</p>
+        <div class="auth-visual-features">
+          <div class="auth-feature">
+            <span class="auth-feature-icon">🔒</span>
+            <span>Autenticação segura com JWT</span>
+          </div>
+          <div class="auth-feature">
+            <span class="auth-feature-icon">⚡</span>
+            <span>Dashboard em tempo real</span>
+          </div>
+          <div class="auth-feature">
+            <span class="auth-feature-icon">📱</span>
+            <span>100% responsivo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-form-side">
+      <div class="auth-form-container glass">
+        <button type="button" class="theme-toggle auth-theme-toggle" id="themeToggle" aria-label="Alternar tema"></button>
+        <a href="index.html" class="back-link">← Voltar ao início</a>
+        <div class="auth-form-header">
+          <h1>Bem-vindo de volta</h1>
+          <p>Entre na sua conta para continuar</p>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="seu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <div class="password-toggle">
+              <input type="password" id="senha" name="senha" class="form-control" placeholder="••••••••" required>
+              <button type="button" class="password-toggle-btn" aria-label="Mostrar senha">👁</button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+
+        <div class="auth-form-footer">
+          <p>Não tem uma conta? <a href="cadastro.html">Criar conta</a></p>
+          <p style="margin-top: 8px;"><a href="#">Recuperar senha</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/auth.js"></script>
+  <script>document.addEventListener('DOMContentLoaded',()=>{UI.init();ThemeManager.init();});</script>
+</body>
+</html>

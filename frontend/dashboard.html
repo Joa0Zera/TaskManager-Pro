@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - TaskManager Pro</title>
+  <script>!function(){var t=localStorage.getItem('taskmanager-theme')||'dark';document.documentElement.setAttribute('data-theme',t)}();</script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/premium.css">
+</head>
+<body class="dashboard-app">
+  <div class="dashboard-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <button type="button" class="sidebar-brand" data-section="dashboard-section" aria-label="Ir para Dashboard">
+          <span class="sidebar-brand-icon">✓</span>
+          TaskManager Pro
+        </button>
+      </div>
+      <nav class="sidebar-nav" id="sidebarNav" aria-label="Menu principal">
+        <button type="button" class="sidebar-nav-item active" data-section="dashboard-section">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          Dashboard
+        </button>
+        <button type="button" class="sidebar-nav-item" data-section="tasks-section">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          Minhas tarefas
+        </button>
+        <button type="button" class="sidebar-nav-item" data-section="kanban-section">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
+          Kanban
+        </button>
+        <button type="button" class="sidebar-nav-item" data-section="calendar-section">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Calendário
+        </button>
+        <button type="button" class="sidebar-nav-item" data-section="categories-section">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+          Categorias
+        </button>
+        <button type="button" class="sidebar-nav-item" data-section="settings-section">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Configurações
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="sidebar-nav-item" id="btnLogout" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+          Logout
+        </button>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="main-content">
+      <header class="dashboard-header header-premium">
+        <div class="header-left">
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          </button>
+          <div class="header-greeting">
+            <h1 id="userGreeting">Olá! 👋</h1>
+            <p id="userSubtitle">Aqui está o resumo das suas tarefas hoje.</p>
+          </div>
+        </div>
+        <div class="header-right header-premium" id="headerTools">
+          <span class="header-clock" id="headerClock">00:00</span>
+          <div class="search-box glass" id="searchBox">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="search" id="searchInput" placeholder="Buscar tarefas..." aria-label="Buscar tarefas">
+          </div>
+          <div class="notifications-wrap" id="notificationsWrap">
+            <button type="button" class="notifications-btn" id="notificationsBtn" aria-label="Notificações">
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+              <span class="notifications-badge hidden" id="notificationsBadge">0</span>
+            </button>
+            <div class="notifications-dropdown glass" id="notificationsDropdown"></div>
+          </div>
+          <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema"></button>
+          <div class="header-avatar-wrap">
+            <button type="button" class="header-avatar" id="headerAvatar" data-section="settings-section" aria-label="Configurações">?</button>
+          </div>
+          <button class="btn btn-primary" id="btnNewTask" type="button">+ Nova Tarefa</button>
+        </div>
+      </header>
+
+      <div class="dashboard-body">
+        <!-- Dashboard -->
+        <section id="dashboard-section" class="app-section is-active" aria-label="Dashboard">
+          <div class="section-intro">
+            <h2>Visão geral</h2>
+            <p>Acompanhe suas métricas e produtividade em tempo real.</p>
+          </div>
+
+          <div class="stats-grid" id="statsGrid">
+            <div class="stat-card glass total">
+              <div class="stat-card-header">
+                <div class="stat-card-icon">📋</div>
+              </div>
+              <div class="stat-card-value" id="statTotal">0</div>
+              <div class="stat-card-label">Total de Tarefas</div>
+            </div>
+            <div class="stat-card glass pending">
+              <div class="stat-card-header">
+                <div class="stat-card-icon">⏳</div>
+              </div>
+              <div class="stat-card-value" id="statPendentes">0</div>
+              <div class="stat-card-label">Pendentes</div>
+            </div>
+            <div class="stat-card glass completed">
+              <div class="stat-card-header">
+                <div class="stat-card-icon">✅</div>
+              </div>
+              <div class="stat-card-value" id="statConcluidas">0</div>
+              <div class="stat-card-label">Concluídas</div>
+            </div>
+            <div class="stat-card glass productivity">
+              <div class="stat-card-header">
+                <div class="stat-card-icon">📈</div>
+              </div>
+              <div class="stat-card-value" id="statProdutividade">0%</div>
+              <div class="stat-card-label">Produtividade</div>
+            </div>
+          </div>
+
+          <div class="weekly-progress-card glass">
+            <div class="weekly-progress-header">
+              <div>
+                <h3>Progresso semanal</h3>
+                <p class="text-muted">Tarefas concluídas nos últimos 7 dias</p>
+              </div>
+              <span id="weeklyProgressLabel" class="badge badge-categoria">0% esta semana</span>
+            </div>
+            <div class="weekly-progress-bar">
+              <div class="weekly-progress-fill" id="weeklyProgress" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <div class="charts-grid">
+            <div class="chart-card glass">
+              <h3>Por categoria</h3>
+              <p>Distribuição das tarefas</p>
+              <div class="chart-wrapper"><canvas id="chartCategories"></canvas></div>
+            </div>
+            <div class="chart-card glass">
+              <h3>Produtividade</h3>
+              <p>Últimos 7 dias</p>
+              <div class="chart-wrapper"><canvas id="chartProductivity"></canvas></div>
+            </div>
+            <div class="chart-card glass">
+              <h3>Por status</h3>
+              <p>Visão geral do fluxo</p>
+              <div class="chart-wrapper"><canvas id="chartStatus"></canvas></div>
+            </div>
+          </div>
+
+          <div class="dashboard-actions">
+            <button type="button" class="btn btn-outline" data-navigate="kanban-section">Abrir Kanban</button>
+            <button type="button" class="btn btn-outline" data-navigate="tasks-section">Ver todas as tarefas</button>
+            <button type="button" class="btn btn-primary" id="btnNewTaskDashboard">+ Nova Tarefa</button>
+          </div>
+        </section>
+
+        <!-- Minhas tarefas -->
+        <section id="tasks-section" class="app-section hidden" aria-label="Minhas tarefas">
+          <div class="section-intro">
+            <h2>Minhas Tarefas</h2>
+            <p>Gerencie, filtre e organize todas as suas tarefas.</p>
+          </div>
+
+          <div class="filters-bar">
+            <span class="filter-label">Filtros:</span>
+            <select id="filterPrioridade" aria-label="Filtrar por prioridade">
+              <option value="">Todas prioridades</option>
+              <option value="baixa">Baixa</option>
+              <option value="media">Média</option>
+              <option value="alta">Alta</option>
+            </select>
+            <select id="filterCategoria" aria-label="Filtrar por categoria">
+              <option value="">Todas categorias</option>
+              <option value="trabalho">Trabalho</option>
+              <option value="estudos">Estudos</option>
+              <option value="pessoal">Pessoal</option>
+            </select>
+            <select id="filterStatus" aria-label="Filtrar por status">
+              <option value="">Todos status</option>
+              <option value="pendente">Pendente</option>
+              <option value="em_andamento">Em andamento</option>
+              <option value="concluida">Concluída</option>
+            </select>
+            <button class="btn-clear-filters" id="btnClearFilters" type="button">Limpar filtros</button>
+          </div>
+
+          <div class="section-title">
+            <h2>Lista de tarefas</h2>
+            <span class="task-count" id="taskCount">0 tarefa(s)</span>
+          </div>
+
+          <div id="tasksContainer">
+            <div class="loading-container">
+              <div class="loading-spinner"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Kanban -->
+        <section id="kanban-section" class="app-section hidden" aria-label="Kanban">
+          <div class="section-intro">
+            <h2>Kanban Board</h2>
+            <p>Arraste tarefas entre colunas para atualizar o status automaticamente.</p>
+          </div>
+          <div id="kanbanBoard" class="kanban-board"></div>
+        </section>
+
+        <!-- Calendário -->
+        <section id="calendar-section" class="app-section hidden" aria-label="Calendário">
+          <div class="section-intro">
+            <h2>Calendário</h2>
+            <p>Visualize tarefas por data de criação e acompanhe deadlines.</p>
+          </div>
+          <div class="calendar-layout">
+            <div class="calendar-main glass">
+              <div class="calendar-toolbar">
+                <h2 id="calendarTitle">—</h2>
+                <div class="calendar-nav">
+                  <button type="button" class="btn btn-secondary btn-sm" id="calPrev">←</button>
+                  <button type="button" class="btn btn-outline btn-sm" id="calToday">Hoje</button>
+                  <button type="button" class="btn btn-secondary btn-sm" id="calNext">→</button>
+                </div>
+              </div>
+              <div id="calendarGrid" class="cal-grid"></div>
+            </div>
+            <div class="cal-sidebar">
+              <div id="miniCalendar"></div>
+              <div id="calendarDayTasks" class="cal-day-tasks-panel glass"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Categorias -->
+        <section id="categories-section" class="app-section hidden" aria-label="Categorias">
+          <div class="section-intro">
+            <h2>Categorias</h2>
+            <p>Visualize a distribuição das suas tarefas por categoria.</p>
+          </div>
+          <div id="categoriesContainer" class="categories-grid">
+            <div class="loading-container">
+              <div class="loading-spinner"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Configurações -->
+        <section id="settings-section" class="app-section hidden" aria-label="Configurações">
+          <div class="section-intro">
+            <h2>Configurações</h2>
+            <p>Gerencie sua conta e preferências do aplicativo.</p>
+          </div>
+          <div id="settingsContainer" class="settings-panel"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal glass">
+      <div class="modal-header">
+        <h2 id="modalTitle">Nova Tarefa</h2>
+        <button class="modal-close" id="btnCloseModal" type="button" aria-label="Fechar">&times;</button>
+      </div>
+      <form id="taskForm">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="titulo">Título *</label>
+            <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Nome da tarefa" required>
+          </div>
+          <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao" class="form-control" placeholder="Detalhes da tarefa..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="prioridade">Prioridade</label>
+            <select id="prioridade" name="prioridade" class="form-control">
+              <option value="baixa">Baixa</option>
+              <option value="media" selected>Média</option>
+              <option value="alta">Alta</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <select id="categoria" name="categoria" class="form-control">
+              <option value="trabalho">Trabalho</option>
+              <option value="estudos">Estudos</option>
+              <option value="pessoal" selected>Pessoal</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select id="status" name="status" class="form-control">
+              <option value="pendente" selected>Pendente</option>
+              <option value="em_andamento">Em andamento</option>
+              <option value="concluida">Concluída</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="btnCancelModal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/kanban.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/tasks.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
